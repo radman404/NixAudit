@@ -63,6 +63,8 @@ expect {
 }
 
 send "sudo -s\n"
+expect "$user: "
+send "$pass\n"
 expect -re "(\\$|>|#) $" {}
 
 send "cd /\n"
